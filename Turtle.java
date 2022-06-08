@@ -8,6 +8,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Turtle extends Actor
 {
+    // frame counter
+    int frameCounter = 0;
+    
+    // animation images
+    
+    GreenfootImage imageIdleRight0;
+    
+    
+    
+    public Turtle()
+    {
+        // load images
+        imageIdleRight0 = new GreenfootImage("IdleRight0.png");
+        
+        imageIdleLeft0 = new GreenfootImage("IdleRight0.png");
+        imageIdleRight0.mirrorHorizontally();
+        
+        
+    }
+    
     /**
      * Act - do whatever the Turtle wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,44 +35,50 @@ public class Turtle extends Actor
     public void act()
     {
         // Add your action code here.
+        movementControls();
+        animate();
         
-        //movement keys
+    }
+    
+    public void movementControls()
+    {
+        // movement keys
+        
+        // left movement
         if (Greenfoot.isKeyDown("left"))
         {
             setRotation(180);
+            setImage(imageIdleRight)
             move(4);
         }  
-        
+        // right movement
         if (Greenfoot.isKeyDown("right"))
         {
             setRotation(360);
             move(4);
-            
         }
-        
+        // down movement
         if (Greenfoot.isKeyDown("down"))
         {
             setRotation(90);
             move(4);
         }
-        
+        // up movement
         if (Greenfoot.isKeyDown("up"))
         {
             setRotation(270);
             move(4);
         }
         
-        // if turtle touches door1, transport to world2.
-        if (isTouching(Door1.class))
-        {
-            Worldright WorldRight = new Worldright();
-            Greenfoot.setWorld(WorldRight);
-        }
+    }
+    
+    public void animate()
+    {
         
-        if (isTouching(Door2.class))
-        {
-            MyWorld myworld = new MyWorld();
-            Greenfoot.setWorld(myworld);
-        }
+        
+        
+        // increment frame counter
+        frameCounter++;
     }
 }
+
