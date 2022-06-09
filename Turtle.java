@@ -17,6 +17,16 @@ public class Turtle extends Actor
         // Add your action code here.
         
         //movement keys
+        Actor Turtle = getOneIntersectingObject(Object1.class);  
+        Actor Turtle2 =  getOneIntersectingObject(Object2.class);  
+        if(Turtle != null)  
+        {  
+           move(-4);
+        }  
+        if(Turtle2 != null)  
+        {  
+           move(-4);
+        } 
         if (Greenfoot.isKeyDown("left"))
         {
             setRotation(180);
