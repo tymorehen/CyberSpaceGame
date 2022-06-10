@@ -14,6 +14,6 @@ public class Object2 extends Obstacle
      */
     public void act()
     {
-        // Add your action code here.
+      
     }
 }

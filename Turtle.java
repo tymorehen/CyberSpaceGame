@@ -19,6 +19,7 @@ public class Turtle extends Actor
         //movement keys
 
 
+
         Actor obstacleRight = getOneObjectAtOffset(getImage().getWidth()/2, 0, Obstacle.class);
           
         Actor obstacleLeft = getOneObjectAtOffset(-getImage().getWidth()/2, 0, Obstacle.class);
@@ -39,6 +40,7 @@ public class Turtle extends Actor
         if (obstacleDown != null) {
             setLocation( getX() ,obstacleDown.getY() + obstacleDown.getImage().getHeight()/2 + getImage().getHeight()/2);
         }
+
 
         if (Greenfoot.isKeyDown("left"))
         {
