@@ -17,6 +17,24 @@ public class Turtle extends Actor
         // Add your action code here.
         
         //movement keys
+<<<<<<< Updated upstream
+=======
+        Actor obstacleRight = getOneObjectAtOffset(getImage().getWidth()/2, 0, Obstacle.class);
+          
+        Actor obstacleLeft = getOneObjectAtOffset(-getImage().getWidth()/2, 0, Obstacle.class);
+        
+        if (obstacleRight!= null) {
+            setLocation(obstacleRight.getX() - obstacleRight.getImage().getWidth()/2 - getImage().getWidth()/2, getY());
+        }
+        if (obstacleLeft != null) {
+            setLocation(obstacleLeft.getX() + obstacleLeft.getImage().getWidth()/2 + getImage().getWidth()/2, getY());
+        }
+        //if(Turtle != null)  
+        //{  
+           
+        //}  
+        
+>>>>>>> Stashed changes
         if (Greenfoot.isKeyDown("left"))
         {
             setRotation(180);

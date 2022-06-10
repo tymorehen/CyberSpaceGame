@@ -8,6 +8,24 @@ class.Turtle.image=Idleright0.png
 dependency1.from=MyWorld
 dependency1.to=Object1
 dependency1.type=UsesDependency
+<<<<<<< Updated upstream
+=======
+dependency10.from=Turtle
+dependency10.to=MyWorld
+dependency10.type=UsesDependency
+dependency11.from=Turtle
+dependency11.to=Object1
+dependency11.type=UsesDependency
+dependency12.from=Turtle
+dependency12.to=Object2
+dependency12.type=UsesDependency
+dependency13.from=Turtle
+dependency13.to=Door1
+dependency13.type=UsesDependency
+dependency14.from=Turtle
+dependency14.to=Door2
+dependency14.type=UsesDependency
+>>>>>>> Stashed changes
 dependency2.from=MyWorld
 dependency2.to=Object2
 dependency2.type=UsesDependency
@@ -17,6 +35,7 @@ dependency3.type=UsesDependency
 dependency4.from=MyWorld
 dependency4.to=Door1
 dependency4.type=UsesDependency
+<<<<<<< Updated upstream
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
@@ -24,6 +43,30 @@ editor.fx.0.y=0
 height=744
 package.numDependencies=4
 package.numTargets=6
+=======
+dependency5.from=Worldright
+dependency5.to=Object2
+dependency5.type=UsesDependency
+dependency6.from=Worldright
+dependency6.to=Object1
+dependency6.type=UsesDependency
+dependency7.from=Worldright
+dependency7.to=Turtle
+dependency7.type=UsesDependency
+dependency8.from=Worldright
+dependency8.to=Door2
+dependency8.type=UsesDependency
+dependency9.from=Turtle
+dependency9.to=Worldright
+dependency9.type=UsesDependency
+editor.fx.0.height=744
+editor.fx.0.width=1382
+editor.fx.0.x=-8
+editor.fx.0.y=-8
+height=744
+package.numDependencies=14
+package.numTargets=7
+>>>>>>> Stashed changes
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
