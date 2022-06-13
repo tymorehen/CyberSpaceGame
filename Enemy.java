@@ -14,6 +14,26 @@ public class Enemy extends Actor
      */
     public void act()
     {
+        Actor obstacleRight = getOneObjectAtOffset(getImage().getWidth()/2, 0, Obstacle.class);
+          
+        Actor obstacleLeft = getOneObjectAtOffset(-getImage().getWidth()/2, 0, Obstacle.class);
+        
+        Actor obstacleUp = getOneObjectAtOffset(0, getImage().getHeight()/2, Obstacle.class);
+        
+        Actor obstacleDown = getOneObjectAtOffset(0, -getImage().getHeight()/2, Obstacle.class);
+        
+        if (obstacleRight != null) {
+            setLocation(obstacleRight.getX() - obstacleRight.getImage().getWidth()/2 - getImage().getWidth()/2, getY());
+        }
+        if (obstacleLeft != null) {
+            setLocation(obstacleLeft.getX() + obstacleLeft.getImage().getWidth()/2 + getImage().getWidth()/2, getY());
+        }
+        if (obstacleUp != null) {
+            setLocation( getX() ,obstacleUp.getY() - obstacleUp.getImage().getHeight()/2 - getImage().getHeight()/2);
+        }
+        if (obstacleDown != null) {
+            setLocation( getX() ,obstacleDown.getY() + obstacleDown.getImage().getHeight()/2 + getImage().getHeight()/2);
+        }
         follow();
     }
     
