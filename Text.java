@@ -9,7 +9,7 @@
 public class Text extends Actor
 {
    public void printToScreen(String text,  int x, int y)
-    {
+   {
      GreenfootImage letters = new GreenfootImage(text, 25, Color.BLACK, new Color(0, 0, 0, 0));
      getWorld().getBackground().drawImage(letters, (getWorld().getWidth()-letters.getWidth())/2, y); 
      
@@ -20,6 +20,6 @@ public class Text extends Actor
    }
    public void act()
    {
-       printToScreen("Hello world, this is just a test demo. Please don't mind the weird font:"0,0);
+       printToScreen("Hello world, this is just a test demo. Please don't mind the weird font,", 400,0);
    }   
 }
