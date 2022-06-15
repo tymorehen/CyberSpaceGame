@@ -8,16 +8,32 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    int[] scores = {0,0,0,0};
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
     public MyWorld()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+    {   
         super(600, 400, 1, false); 
         prepare();
+        
+        Label label = new Label("Score:0000",25);
+        addObject(label, 100, 50);
+    }
+    public int getScore(int player)
+    {
+        return scores[player];
+    }
+     
+    public void addScore(int player, int amount)
+    {
+        scores[player] += amount;
+    }
+     
+    public int[] getScores()
+    {
+        return scores;
     }
     
     /**
@@ -26,16 +42,15 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        Object1 object1 = new Object1();
-        addObject(object1,125,275);
-        Object1 object12 = new Object1();
-        addObject(object12,476,276);
-        Object2 object2 = new Object2();
-        addObject(object2,300,21);
+        Wall1 wall1 = new Wall1();
+        addObject(wall1,300,30);
+        Wall2 wall2 = new Wall2();
+        addObject(wall2,150,120);
+        Wall4 wall4 = new Wall4();
+        addObject(wall4,690,210);
         Turtle turtle = new Turtle();
         addObject(turtle,299,350);
-        Door1 door1 = new Door1();
-        addObject(door1,615,123);
+        
     }
    
 }
