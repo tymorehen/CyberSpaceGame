@@ -131,7 +131,7 @@ public class Turtle extends Actor
         //movement keys
         GreenfootImage image = getImage();
 
-       image.scale(50, 50);
+       
 
 
         Actor obstacleRight = getOneObjectAtOffset(getImage().getWidth()/2, 0, Obstacle.class);
@@ -161,8 +161,8 @@ public class Turtle extends Actor
         // if turtle touches door1, transport to world2.
         if (isTouching(Door1.class))
         {
-            Worldright WorldRight = new Worldright();
-            Greenfoot.setWorld(WorldRight);
+            Worldright worldRight = new Worldright();
+            Greenfoot.setWorld(worldRight);
         }
         
         if (isTouching(Door2.class))
