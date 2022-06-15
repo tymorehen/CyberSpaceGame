@@ -8,38 +8,41 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Turtle extends Actor
 {
+    int speed = 4;
     /**
      * Act - do whatever the Turtle wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
-        // Add your action code here.
+        moveplayer();
         
-        //movement keys
-        if (Greenfoot.isKeyDown("left"))
+    }    //movement keys
+    
+    public void moveplayer()
+    {
+        if (Greenfoot.isKeyDown("a"))
         {
-            setRotation(180);
-            move(4);
+            setLocation(getX() - speed,getY());
+            setRotation (180);
         }  
         
-        if (Greenfoot.isKeyDown("right"))
+        if (Greenfoot.isKeyDown("d"))
         {
-            setRotation(360);
-            move(4);
-            
+            setLocation(getX() + speed,getY());
+            setRotation(0);
         }
         
-        if (Greenfoot.isKeyDown("down"))
+        if (Greenfoot.isKeyDown("s"))
         {
+            setLocation(getX(),getY() + speed);
             setRotation(90);
-            move(4);
         }
         
-        if (Greenfoot.isKeyDown("up"))
+        if (Greenfoot.isKeyDown("w"))
         {
+            setLocation(getX(),getY() - speed);
             setRotation(270);
-            move(4);
         }
 
     }

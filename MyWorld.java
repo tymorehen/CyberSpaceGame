@@ -45,9 +45,9 @@ public class MyWorld extends World
         Wall1 wall1 = new Wall1();
         addObject(wall1,300,30);
         Wall2 wall2 = new Wall2();
-        addObject(wall2,150,120);
+        addObject(wall2,70,220);
         Wall4 wall4 = new Wall4();
-        addObject(wall4,690,210);
+        addObject(wall4,530,470);
         Turtle turtle = new Turtle();
         addObject(turtle,299,350);
         
