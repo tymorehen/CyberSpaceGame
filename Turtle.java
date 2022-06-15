@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Robot extends Actor
+public class Turtle extends Actor
 {
     // Number of frames/acts between animation images.
     final int ANIMATION_INTERVAL = 3;
@@ -69,7 +69,7 @@ public class Robot extends Actor
     GreenfootImage imageavatar_down3;
     GreenfootImage imageavatar_down4;
     
-    public Robot()
+    public Turtle()
     {
         // load images
         
