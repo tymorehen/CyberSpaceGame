@@ -129,7 +129,9 @@ public class Turtle extends Actor
 
         
         //movement keys
+        GreenfootImage image = getImage();
 
+       image.scale(50, 50);
 
 
         Actor obstacleRight = getOneObjectAtOffset(getImage().getWidth()/2, 0, Obstacle.class);
@@ -154,30 +156,7 @@ public class Turtle extends Actor
         }
 
 
-        if (Greenfoot.isKeyDown("left"))
-        {
-            setRotation(180);
-            move(4);
-        }  
-        
-        if (Greenfoot.isKeyDown("right"))
-        {
-            setRotation(360);
-            move(4);
-            
-        }
-        
-        if (Greenfoot.isKeyDown("down"))
-        {
-            setRotation(90);
-            move(4);
-        }
-        
-        if (Greenfoot.isKeyDown("up"))
-        {
-            setRotation(270);
-            move(4);
-        }
+    
         
         // if turtle touches door1, transport to world2.
         if (isTouching(Door1.class))
