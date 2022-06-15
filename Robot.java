@@ -15,7 +15,7 @@ public class Robot extends Actor
     int frameCounter = 0;
     
     // movement speed.
-    final int SPEED_X = 5;
+    final int SPEED_X = 3;
     
     // movement variables
     int deltaX;
@@ -201,11 +201,11 @@ public class Robot extends Actor
             animateLeft();
         }
         
-        if (deltaY > 0) // if moving up
+        if (deltaY < 0) // if moving up
         {
             animateUp();
         }
-        else if (deltaY < 0) // if moving down
+        else if (deltaY > 0) // if moving down
         {
             animateDown();
         }
@@ -213,12 +213,13 @@ public class Robot extends Actor
         // increment frame counter
         frameCounter++;
 
+        setLocation(getX() + deltaX, getY() + deltaY);      
     }
     
     public void animateRight()
     {
         // cycle images through frames.
-        if (frameCounter == 8 * ANIMATION_INTERVAL)
+        if (frameCounter >= 8 * ANIMATION_INTERVAL)
         {
             // Reset to 0.
             frameCounter = 0;
@@ -261,7 +262,7 @@ public class Robot extends Actor
     public void animateLeft()
     {
         // cycle images through frames.
-        if (frameCounter == 8 * ANIMATION_INTERVAL)
+        if (frameCounter >= 8 * ANIMATION_INTERVAL)
         {
             // Reset to 0.
             frameCounter = 0;
@@ -304,7 +305,7 @@ public class Robot extends Actor
     public void animateUp()
     {
         // cycle images through frames.
-        if (frameCounter == 6 * ANIMATION_INTERVAL)
+        if (frameCounter >= 6 * ANIMATION_INTERVAL)
         {
             // Reset to 0.
             frameCounter = 0;
@@ -339,7 +340,7 @@ public class Robot extends Actor
     public void animateDown()
     {
         // cycle images through frames.
-        if (frameCounter == 5 * ANIMATION_INTERVAL)
+        if (frameCounter >= 5 * ANIMATION_INTERVAL)
         {
             // Reset to 0.
             frameCounter = 0;
