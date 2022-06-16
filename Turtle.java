@@ -128,12 +128,12 @@ public class Turtle extends Actor
     {
 
         
-        //movement keys
+        // movement keys
         GreenfootImage image = getImage();
 
        
 
-
+        // collision detection
         Actor obstacleRight = getOneObjectAtOffset(getImage().getWidth()/2, 0, Obstacle.class);
           
         Actor obstacleLeft = getOneObjectAtOffset(-getImage().getWidth()/2, 0, Obstacle.class);
