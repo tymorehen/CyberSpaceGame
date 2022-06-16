@@ -27,11 +27,11 @@ public class Worldright extends World
     private void prepare()
     {
         Object2 object2 = new Object2();
-        addObject(object2,85,325);
+        addObject(object2,85,350);
         Object1 object1 = new Object1();
         addObject(object1,124,73);
         Turtle turtle = new Turtle();
-        addObject(turtle,33,226);
+        addObject(turtle,100,226);
         Door2 door2 = new Door2();
         addObject(door2,-15,223);
     }
