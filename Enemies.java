@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Wall1 here.
+ * Write a description of class Enemies here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Wall1 extends Actor
+public class Enemies extends Actor
 {
     /**
-     * Act - do whatever the Wall1 wants to do. This method is called whenever
+     * Act - do whatever the Enemies wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        
+        // Add your action code here.
     }    
 }

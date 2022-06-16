@@ -44,6 +44,12 @@ public class Turtle extends Actor
             setLocation(getX(),getY() - speed);
             setRotation(270);
         }
-
+        if(Greenfoot.mouseClicked(null))
+        {
+            Arrow arrow = new Arrow();
+            getWorld().addObject(arrow, getX(), getY());
+            arrow.rotate();
+        }
     }
+    
 }
