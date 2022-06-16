@@ -27,16 +27,16 @@ public class MyWorld extends World
     private void prepare()
     {
         Object1 object1 = new Object1();
-        addObject(object1,125,275);
+        addObject(object1,125,300);
         Object1 object12 = new Object1();
-        addObject(object12,476,276);
+        addObject(object12,476,300);
         Object2 object2 = new Object2();
         addObject(object2,300,21);
 
         
       
         Door1 door1 = new Door1();
-        addObject(door1,550,123);
+        addObject(door1,615,123);
         
         Turtle Turtle = new Turtle();
         addObject(Turtle,299,350);
