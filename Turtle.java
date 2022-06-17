@@ -150,20 +150,8 @@ public class Turtle extends Actor
         if (obstacleDown != null) {
             setLocation( getX() ,obstacleDown.getY() + obstacleDown.getImage().getHeight()/2 + getImage().getHeight()/2);
         }
-        
-        // if turtle touches door1, transport to world2.
-        if (isTouching(Door1.class))
-        {
-            Worldright worldRight = new Worldright();
-            Greenfoot.setWorld(worldRight);
-        }
-        
-        if (isTouching(Door2.class))
-        {
-            MyWorld myworld = new MyWorld();
-            Greenfoot.setWorld(myworld);
-        }
 
+        // stop game if touching enemy
         if (isTouching(Enemy.class))
         {
             Greenfoot.stop();
