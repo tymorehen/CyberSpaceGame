@@ -34,5 +34,7 @@ public class Worldright extends World
         addObject(turtle,100,226);
         Door2 door2 = new Door2();
         addObject(door2,-15,223);
+        Enemy enemy = new Enemy();
+        addObject(enemy,517,71);
     }
 }

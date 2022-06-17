@@ -126,12 +126,8 @@ public class Turtle extends Actor
      */
     public void act()
     {
-
-        
         // movement keys
         GreenfootImage image = getImage();
-
-       
 
         // collision detection
         Actor obstacleRight = getOneObjectAtOffset(getImage().getWidth()/2, 0, Obstacle.class);
@@ -154,9 +150,6 @@ public class Turtle extends Actor
         if (obstacleDown != null) {
             setLocation( getX() ,obstacleDown.getY() + obstacleDown.getImage().getHeight()/2 + getImage().getHeight()/2);
         }
-
-
-    
         
         // if turtle touches door1, transport to world2.
         if (isTouching(Door1.class))
@@ -171,7 +164,10 @@ public class Turtle extends Actor
             Greenfoot.setWorld(myworld);
         }
 
-
+        if (isTouching(Enemy.class))
+        {
+            Greenfoot.stop();
+        }
         movementControls();
         animate();
         
