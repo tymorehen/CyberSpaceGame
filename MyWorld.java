@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    Turtle player;
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -37,9 +38,28 @@ public class MyWorld extends World
         Door1 door1 = new Door1();
         addObject(door1,615,123);
 
+
         Turtle Turtle = new Turtle();
         addObject(Turtle,299,350);
-        Enemy enemy = new Enemy();
-        addObject(enemy,296,166);
+     
+
+        player = new Turtle();
+        addObject(player,299,350);
     }
+    
+    public void act()
+    {
+        int scrollX = player.getX() - getWidth() / 2;
+        int scrollY = player.getY() - getHeight() / 2;
+        scroll(scrollX, scrollY);
+    }
+    
+    public void scroll(int x, int y)
+    {
+        for (Actor actor : getObjects(Actor.class))
+        {
+            actor.setLocation(actor.getX() - x,actor.getY() - y);
+        }
+    }
+    
 }
