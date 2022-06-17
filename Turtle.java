@@ -158,18 +158,7 @@ public class Turtle extends Actor
 
     
         
-        // if turtle touches door1, transport to world2.
-        if (isTouching(Door1.class))
-        {
-            Worldright worldRight = new Worldright();
-            Greenfoot.setWorld(worldRight);
-        }
-        
-        if (isTouching(Door2.class))
-        {
-            MyWorld myworld = new MyWorld();
-            Greenfoot.setWorld(myworld);
-        }
+     
 
 
         movementControls();

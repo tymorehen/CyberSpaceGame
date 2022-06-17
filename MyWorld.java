@@ -36,8 +36,7 @@ public class MyWorld extends World
 
         
       
-        Door1 door1 = new Door1();
-        addObject(door1,615,123);
+        
         
         player = new Turtle();
         addObject(player,299,350);

@@ -1,16 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Boss1 here.
+ * Write a description of class Boss2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Boss1 extends Actor
+public class Boss2 extends Actor
 {
     public void askQuestion(){
-        String answer = Greenfoot.ask("Hello, if you can answer my ridde I will let you pass. What can’t talk but will reply when spoken to?");
-          if(answer.equalsIgnoreCase("echo")){
+        String answer = Greenfoot.ask("A giraffe has two eyes, a monkey has two eyes, and an elephant has two eyes, how many eyes do we have?");
+          if(answer.equalsIgnoreCase("4")){
               getWorld().removeObject(this);
           }
           else{
@@ -21,13 +21,13 @@ public class Boss1 extends Actor
     
     
     /**
-     * Act - do whatever the Boss1 wants to do. This method is called whenever
+     * Act - do whatever the Boss2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        Actor Boss1 = getOneIntersectingObject(Turtle.class);
-        if(Boss1 != null)  
+        Actor Boss2 = getOneIntersectingObject(Turtle.class);
+        if(Boss2 != null)  
         {  
           askQuestion();
         
