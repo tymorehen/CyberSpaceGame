@@ -1,7 +1,7 @@
 #Greenfoot project file
+class.Enemy.image=enemy_idle0.png
 class.MyWorld.image=bluegridgreenfoot.jpg
 class.Object1.image=object1.png
 class.Object2.image=object2.png
 class.Turtle.image=avatar_idle7.png
 class.Worldright.image=bluegridgreenfoot.jpg
-

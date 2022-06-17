@@ -34,11 +34,15 @@ public class MyWorld extends World
         Object2 object2 = new Object2();
         addObject(object2,300,21);
 
-        
       
         Door1 door1 = new Door1();
         addObject(door1,615,123);
-        
+
+
+        Turtle Turtle = new Turtle();
+        addObject(Turtle,299,350);
+     
+
         player = new Turtle();
         addObject(player,299,350);
     }
