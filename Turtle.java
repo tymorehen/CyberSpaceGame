@@ -151,11 +151,17 @@ public class Turtle extends Actor
             setLocation( getX() ,obstacleDown.getY() + obstacleDown.getImage().getHeight()/2 + getImage().getHeight()/2);
         }
 
+
+    
+        
+     
+
         // stop game if touching enemy
         if (isTouching(Enemy.class))
         {
             Greenfoot.stop();
         }
+
         movementControls();
         animate();
         
