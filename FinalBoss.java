@@ -12,6 +12,8 @@ public class FinalBoss extends Actor
         String answer = Greenfoot.ask("What animal is best at hitting a baseball?");
           if(answer.equalsIgnoreCase("bat")){
               getWorld().removeObject(this);
+              YouWin youWin = new YouWin();
+              Greenfoot.setWorld(youWin);
           }
           else{
               askQuestion();
