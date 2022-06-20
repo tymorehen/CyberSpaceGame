@@ -6,7 +6,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Wall1 extends Actor
+
+public class Wall1 extends Obstacle
+
 {
     /**
      * Act - do whatever the Wall1 wants to do. This method is called whenever
@@ -14,6 +16,11 @@ public class Wall1 extends Actor
      */
     public void act() 
     {
+
         
     }    
+
+      
 }
+
+

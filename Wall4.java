@@ -1,3 +1,4 @@
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -6,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Wall4 extends Actor
+public class Wall4 extends Obstacle
 {
     /**
      * Act - do whatever the Wall4 wants to do. This method is called whenever
@@ -17,3 +18,4 @@ public class Wall4 extends Actor
         // Add your action code here.
     }    
 }
+
