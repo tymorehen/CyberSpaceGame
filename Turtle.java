@@ -126,14 +126,10 @@ public class Turtle extends Actor
      */
     public void act()
     {
-
-        
-        //movement keys
+        // movement keys
         GreenfootImage image = getImage();
 
-       
-
-
+        // collision detection
         Actor obstacleRight = getOneObjectAtOffset(getImage().getWidth()/2, 0, Obstacle.class);
           
         Actor obstacleLeft = getOneObjectAtOffset(-getImage().getWidth()/2, 0, Obstacle.class);
@@ -160,6 +156,11 @@ public class Turtle extends Actor
         
      
 
+        // stop game if touching enemy
+        if (isTouching(Enemy.class))
+        {
+            Greenfoot.stop();
+        }
 
         movementControls();
         animate();
@@ -229,20 +230,20 @@ public class Turtle extends Actor
         
         if (deltaX > 0) // if moving right
         {
-            animateRight();
+            //animateRight();
         }
         else if (deltaX < 0) // if moving left
         {
-            animateLeft();
+            //animateLeft();
         }
         
         if (deltaY < 0) // if moving up
         {
-            animateUp();
+            //animateUp();
         }
         else if (deltaY > 0) // if moving down
         {
-            animateDown();
+            //animateDown();
         }
         
         // increment frame counter
