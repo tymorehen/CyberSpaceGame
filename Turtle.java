@@ -151,11 +151,17 @@ public class Turtle extends Actor
             setLocation( getX() ,obstacleDown.getY() + obstacleDown.getImage().getHeight()/2 + getImage().getHeight()/2);
         }
 
+
+    
+        
+     
+
         // stop game if touching enemy
         if (isTouching(Enemy.class))
         {
             Greenfoot.stop();
         }
+
         movementControls();
         animate();
         
@@ -224,20 +230,20 @@ public class Turtle extends Actor
         
         if (deltaX > 0) // if moving right
         {
-            animateRight();
+            //animateRight();
         }
         else if (deltaX < 0) // if moving left
         {
-            animateLeft();
+            //animateLeft();
         }
         
         if (deltaY < 0) // if moving up
         {
-            animateUp();
+            //animateUp();
         }
         else if (deltaY > 0) // if moving down
         {
-            animateDown();
+            //animateDown();
         }
         
         // increment frame counter
