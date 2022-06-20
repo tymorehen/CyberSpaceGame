@@ -9,7 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
 
-    int[] scores = {0,0,0,0};
+
+    
+
+   
+    
 
     Turtle player;
     
@@ -23,23 +27,13 @@ public class MyWorld extends World
         super(600, 400, 1, false); 
         prepare();
         
-        Label label = new Label("Score:0000",25);
-        addObject(label, 100, 50);
+      
     }
-    public int getScore(int player)
-    {
-        return scores[player];
-    }
+   
      
-    public void addScore(int player, int amount)
-    {
-        scores[player] += amount;
-    }
+   
      
-    public int[] getScores()
-    {
-        return scores;
-    }
+   
     
     /**
      * Prepare the world for the start of the program.
@@ -47,6 +41,7 @@ public class MyWorld extends World
      */
     private void prepare()
     {
+
 
         Wall1 wall1 = new Wall1();
         addObject(wall1,300,30);
@@ -79,11 +74,21 @@ public class MyWorld extends World
         Wall15 wall15 = new Wall15();
         addObject(wall15, 300, 380);
         
-        Turtle turtle = new Turtle();
-        addObject(turtle,300,200);
+        
         
         player = new Turtle();
         addObject(player,300, 200);
+
+       //Object1 object1 = new Object1();
+        //addObject(object1,125,300);
+       // Object1 object12 = new Object1();
+        //addObject(object12,476,300);
+        //Object2 object2 = new Object2();
+       // addObject(object2,300,21);
+
+      
+
+      
     }
     
     public void act()
@@ -102,4 +107,8 @@ public class MyWorld extends World
     }
     
 
+
 }
+
+
+

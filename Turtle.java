@@ -9,7 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Turtle extends Actor
 {
 
+
     int speed = 4;
+
 
     // Number of frames/acts between animation images.
     final int ANIMATION_INTERVAL = 3;
@@ -130,15 +132,21 @@ public class Turtle extends Actor
     public void act()
     {
 
+
         moveplayer();
         
     }    //movement keys
     
     public void moveplayer()
     {
-        //movement keys
-        GreenfootImage image = getImage();
         
+       
+        
+
+        // movement keys
+        GreenfootImage image = getImage();
+
+        // collision detection
         Actor obstacleRight = getOneObjectAtOffset(getImage().getWidth()/2, 0, Obstacle.class);
           
         Actor obstacleLeft = getOneObjectAtOffset(-getImage().getWidth()/2, 0, Obstacle.class);
@@ -159,9 +167,18 @@ public class Turtle extends Actor
         if (obstacleDown != null) {
             setLocation( getX() ,obstacleDown.getY() + obstacleDown.getImage().getHeight()/2 + getImage().getHeight()/2);
         }
-        
-       
 
+
+
+    
+        
+     
+
+        // stop game if touching enemy
+        if (isTouching(Enemy.class))
+        {
+            Greenfoot.stop();
+        }
 
         movementControls();
         animate();
@@ -176,12 +193,16 @@ public class Turtle extends Actor
         // movement keys
         
         // left movement
+
+
         if (Greenfoot.isKeyDown("A"))
+
         {
             deltaX = deltaX - SPEED_X;
             animateLeft();      
         }  
         // right movement
+
         if (Greenfoot.isKeyDown("D"))
         {
             deltaX = deltaX + SPEED_X;
@@ -214,6 +235,8 @@ public class Turtle extends Actor
         
     }
     
+  
+    
     public void animate()
     {
         
@@ -231,20 +254,21 @@ public class Turtle extends Actor
         
         if (deltaX > 0) // if moving right
         {
-            animateRight();
+            //animateRight();
         }
         else if (deltaX < 0) // if moving left
         {
-            animateLeft();
+            //animateLeft();
         }
         
         if (deltaY < 0) // if moving up
         {
-            animateUp();
+            //animateUp();
         }
         else if (deltaY > 0) // if moving down
         {
-            animateDown();
+            //animateDown();
+
         }
         
         // increment frame counter
@@ -404,6 +428,6 @@ public class Turtle extends Actor
         }
 
     }
-    
+
 }
 
