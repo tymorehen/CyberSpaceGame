@@ -9,6 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Turtle extends Actor
 {
 
+
+    int speed = 4;
+
+
     // Number of frames/acts between animation images.
     final int ANIMATION_INTERVAL = 3;
     
@@ -120,12 +124,25 @@ public class Turtle extends Actor
                 
     }
 
+
     /**
      * Act - do whatever the Turtle wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
+
+
+        moveplayer();
+        
+    }    //movement keys
+    
+    public void moveplayer()
+    {
+        
+       
+        
+
         // movement keys
         GreenfootImage image = getImage();
 
@@ -152,6 +169,7 @@ public class Turtle extends Actor
         }
 
 
+
     
         
      
@@ -175,25 +193,29 @@ public class Turtle extends Actor
         // movement keys
         
         // left movement
-        if (Greenfoot.isKeyDown("left"))
+
+
+        if (Greenfoot.isKeyDown("A"))
+
         {
             deltaX = deltaX - SPEED_X;
             animateLeft();      
         }  
         // right movement
-        if (Greenfoot.isKeyDown("right"))
+
+        if (Greenfoot.isKeyDown("D"))
         {
             deltaX = deltaX + SPEED_X;
             animateRight();
         }
         // down movement
-        if (Greenfoot.isKeyDown("down"))
+        if (Greenfoot.isKeyDown("S"))
         {
             deltaY = deltaY + SPEED_X;
             animateDown();
         }
         // up movement
-        if (Greenfoot.isKeyDown("up"))
+        if (Greenfoot.isKeyDown("W"))
         {
             deltaY = deltaY - SPEED_X;
             animateUp();
@@ -212,6 +234,8 @@ public class Turtle extends Actor
         }
         
     }
+    
+  
     
     public void animate()
     {
@@ -244,6 +268,7 @@ public class Turtle extends Actor
         else if (deltaY > 0) // if moving down
         {
             //animateDown();
+
         }
         
         // increment frame counter
@@ -403,5 +428,6 @@ public class Turtle extends Actor
         }
 
     }
+
 }
 
