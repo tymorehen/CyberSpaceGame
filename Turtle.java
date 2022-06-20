@@ -224,20 +224,20 @@ public class Turtle extends Actor
         
         if (deltaX > 0) // if moving right
         {
-            animateRight();
+            //animateRight();
         }
         else if (deltaX < 0) // if moving left
         {
-            animateLeft();
+            //animateLeft();
         }
         
         if (deltaY < 0) // if moving up
         {
-            animateUp();
+            //animateUp();
         }
         else if (deltaY > 0) // if moving down
         {
-            animateDown();
+            //animateDown();
         }
         
         // increment frame counter

@@ -39,9 +39,7 @@ public class MyWorld extends World
         addObject(door1,615,123);
 
 
-        Turtle Turtle = new Turtle();
-        addObject(Turtle,299,350);
-     
+      
 
         player = new Turtle();
         addObject(player,299,350);
