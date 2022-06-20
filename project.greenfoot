@@ -1,5 +1,4 @@
 #Greenfoot project file
-
 class.Boss1.image=boss1.png
 class.Boss2.image=boss2.png
 class.Enemy.image=blue-draught.png
@@ -7,4 +6,6 @@ class.FinalBoss.image=barrybond.png
 class.MyWorld.image=bluegridgreenfoot.jpg
 class.Object1.image=object1.png
 class.Object2.image=object2.png
+class.Turtle.image=avatar_idle7.png
+class.YouWin.image=YouWin\!screen.jpg
 class.Turtle.image=turtle.png
