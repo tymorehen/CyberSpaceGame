@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy extends Actor
 {
+
     
     // number of frames/acts between animation images.
     final int ANIMATION_INTERVAL = 3;
@@ -39,12 +40,14 @@ public class Enemy extends Actor
     GreenfootImage imageenemy_right5;
     GreenfootImage imageenemy_right6;
     
+
     /**
      * Act - do whatever the Enemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
+
         // make enemy follow player
         follow();
         // collision detection
@@ -75,6 +78,7 @@ public class Enemy extends Actor
     
     public void collisionDetection()
     {
+
         Actor obstacleRight = getOneObjectAtOffset(getImage().getWidth()/2, 0, Obstacle.class);
           
         Actor obstacleLeft = getOneObjectAtOffset(-getImage().getWidth()/2, 0, Obstacle.class);
@@ -95,7 +99,11 @@ public class Enemy extends Actor
         if (obstacleDown != null) {
             setLocation( getX() ,obstacleDown.getY() + obstacleDown.getImage().getHeight()/2 + getImage().getHeight()/2);
         }
+
+        follow();
     }
+    
+    
     
     public Enemy()
     {
@@ -212,5 +220,6 @@ public class Enemy extends Actor
         {
             setImage(imageenemy_left6);
         }
+
     }
 }
