@@ -172,6 +172,10 @@ public class Turtle extends Actor
 
     
         
+
+
+        shoot();
+
      
 
         // stop game if touching enemy
@@ -187,6 +191,7 @@ public class Turtle extends Actor
     
     public void movementControls()
     {
+        int angle = getRotation();
         deltaX = 0;
         deltaY = 0;
         
@@ -194,33 +199,31 @@ public class Turtle extends Actor
         
         // left movement
 
-
-        if (Greenfoot.isKeyDown("Left"))
-
+        if (Greenfoot.isKeyDown("A"))
         {
             deltaX = deltaX - SPEED_X;
             animateLeft();      
         }  
         // right movement
-
-        if (Greenfoot.isKeyDown("Right"))
+        if (Greenfoot.isKeyDown("D"))
         {
             deltaX = deltaX + SPEED_X;
             animateRight();
         }
         // down movement
-        if (Greenfoot.isKeyDown("Down"))
+
+        if (Greenfoot.isKeyDown("S"))
         {
             deltaY = deltaY + SPEED_X;
             animateDown();
         }
         // up movement
-        if (Greenfoot.isKeyDown("Up"))
+
+        if (Greenfoot.isKeyDown("W"))
         {
             deltaY = deltaY - SPEED_X;
             animateUp();
         }
-        
         setLocation(getX() + deltaX, getY() + deltaY);
         
         // remember wether facing right or left
@@ -233,6 +236,23 @@ public class Turtle extends Actor
             isFacingRight = false;
         }
         
+    }
+    //makes enemy shoot
+
+    public void shoot()
+    {
+        if ("space".equals(Greenfoot.getKey()))  
+        {  
+            fire(); 
+        }
+    }
+    
+    public void fire() 
+    {
+        Bullet bullet = new Bullet();
+        getWorld().addObject(bullet, getX(), getY());
+        MouseInfo mouse = Greenfoot.getMouseInfo();
+        bullet.turnTowards(mouse.getX(),mouse.getY());
     }
     
   
@@ -426,8 +446,14 @@ public class Turtle extends Actor
         {
             setImage(imageavatar_down4);
         }
-
     }
 
 }
+    
+    
+    //public void death()
+    
+        
+    
+
 
