@@ -20,6 +20,7 @@ public class YouWin extends World
         prepare();
         
         showText ("press ENTER to restart", 300, 325);
+        showText ("press ESCAPE to stop", 300, 100);
     }
     
     /**
@@ -38,6 +39,10 @@ public class YouWin extends World
         {
             MyWorld myworld = new MyWorld();
             Greenfoot.setWorld(myworld);
+        }       
+        else if (Greenfoot.isKeyDown("escape"))
+        {
+           Greenfoot.stop();
         }       
     }
 }

@@ -26,6 +26,7 @@ public class MyWorld extends World
      */
     public MyWorld()
     {   
+        //sets up world
         super(600, 400, 1, false); 
         prepare();
         
@@ -44,7 +45,7 @@ public class MyWorld extends World
     private void prepare()
     {
 
-
+        //adds all game elements 
         Wall1 wall1 = new Wall1();
         addObject(wall1,300,30);
         Wall2 wall2 = new Wall2();
@@ -102,6 +103,7 @@ public class MyWorld extends World
     
     public void act()
     {
+        //player moving with camera 
         int scrollX = player.getX() - getWidth() / 2;
         int scrollY = player.getY() - getHeight() / 2;
         scroll(scrollX, scrollY);
