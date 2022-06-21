@@ -158,20 +158,8 @@ public class Turtle extends Actor
 
     
         
-        // if turtle touches door1, transport to world2.
-        if (isTouching(Door1.class))
-        {
-            Worldright worldRight = new Worldright();
-            Greenfoot.setWorld(worldRight);
-        }
-        
-        if (isTouching(Door2.class))
-        {
-            MyWorld myworld = new MyWorld();
-            Greenfoot.setWorld(myworld);
-        }
 
-
+        shoot();
         movementControls();
         animate();
         
@@ -179,36 +167,36 @@ public class Turtle extends Actor
     
     public void movementControls()
     {
+        int angle = getRotation();
         deltaX = 0;
         deltaY = 0;
         
         // movement keys
         
         // left movement
-        if (Greenfoot.isKeyDown("left"))
+        if (Greenfoot.isKeyDown("A"))
         {
             deltaX = deltaX - SPEED_X;
             animateLeft();      
         }  
         // right movement
-        if (Greenfoot.isKeyDown("right"))
+        if (Greenfoot.isKeyDown("D"))
         {
             deltaX = deltaX + SPEED_X;
             animateRight();
         }
         // down movement
-        if (Greenfoot.isKeyDown("down"))
+        if (Greenfoot.isKeyDown("S"))
         {
             deltaY = deltaY + SPEED_X;
             animateDown();
         }
         // up movement
-        if (Greenfoot.isKeyDown("up"))
+        if (Greenfoot.isKeyDown("W"))
         {
             deltaY = deltaY - SPEED_X;
             animateUp();
         }
-        
         setLocation(getX() + deltaX, getY() + deltaY);
         
         // remember wether facing right or left
@@ -221,6 +209,23 @@ public class Turtle extends Actor
             isFacingRight = false;
         }
         
+    }
+    //makes enemy shoot
+
+    public void shoot()
+    {
+        if ("space".equals(Greenfoot.getKey()))  
+        {  
+            fire(); 
+        }
+    }
+    
+    public void fire() 
+    {
+        Bullet bullet = new Bullet();
+        getWorld().addObject(bullet, getX(), getY());
+        MouseInfo mouse = Greenfoot.getMouseInfo();
+        bullet.turnTowards(mouse.getX(),mouse.getY());
     }
     
     public void animate()
@@ -411,7 +416,13 @@ public class Turtle extends Actor
         {
             setImage(imageavatar_down4);
         }
-
     }
 }
+    
+    
+    //public void death()
+    
+        
+    
+
 

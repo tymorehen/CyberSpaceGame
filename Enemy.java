@@ -43,6 +43,5 @@ public class Enemy extends Actor
         turnTowards(turtle.getX(), turtle.getY());
         move(2);
         if (getWorld().getObjects(Turtle.class).isEmpty()) return;
-        
     }
 }
