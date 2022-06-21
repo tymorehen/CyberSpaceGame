@@ -107,6 +107,12 @@ public class Enemy extends Actor
     
     public Enemy()
     {
+
+        Actor turtle = (Actor)getWorld().getObjects(Turtle.class).get(0);
+        turnTowards(turtle.getX(), turtle.getY());
+        move(2);
+        if (getWorld().getObjects(Turtle.class).isEmpty()) return;
+
         // load animation images
         
         // load left animation images
@@ -220,6 +226,7 @@ public class Enemy extends Actor
         {
             setImage(imageenemy_left6);
         }
+
 
     }
 }

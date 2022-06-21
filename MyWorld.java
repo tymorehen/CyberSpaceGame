@@ -109,6 +109,7 @@ public class MyWorld extends World
         scroll(scrollX, scrollY);
     }
     
+    //lets player wonder around
     public void scroll(int x, int y)
     {
         for (Actor actor : getObjects(Actor.class))
