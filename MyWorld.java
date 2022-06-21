@@ -17,7 +17,9 @@ public class MyWorld extends World
 
     Turtle player;
     
-
+    Boss1 boss1;
+    Boss2 boss2;
+    FinalBoss finalBoss;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -74,7 +76,14 @@ public class MyWorld extends World
         Wall15 wall15 = new Wall15();
         addObject(wall15, 300, 380);
         
+        boss1 = new Boss1();
+        addObject(boss1, 625,-50);
         
+        boss2 = new Boss2();
+        addObject(boss2, 700,-500);
+        
+        finalBoss = new FinalBoss();
+        addObject(finalBoss, 1025,-800);
         
         player = new Turtle();
         addObject(player,300, 200);

@@ -14,7 +14,8 @@ public class Boss1 extends Actor
               getWorld().removeObject(this);
           }
           else{
-              askQuestion();
+              ZGameOver gameOver = new ZGameOver();
+              Greenfoot.setWorld(gameOver);
           }
         
     }
@@ -26,6 +27,7 @@ public class Boss1 extends Actor
      */
     public void act() 
     {
+     
         Actor Boss1 = getOneIntersectingObject(Turtle.class);
         if(Boss1 != null)  
         {  

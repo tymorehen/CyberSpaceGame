@@ -16,7 +16,8 @@ public class FinalBoss extends Actor
               Greenfoot.setWorld(youWin);
           }
           else{
-              askQuestion();
+              ZGameOver_final gameOver = new ZGameOver_final();
+              Greenfoot.setWorld(gameOver);
           }
         
     }

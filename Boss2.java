@@ -14,7 +14,8 @@ public class Boss2 extends Actor
               getWorld().removeObject(this);
           }
           else{
-              askQuestion();
+              ZGameOver_boss2 gameOver = new ZGameOver_boss2();
+              Greenfoot.setWorld(gameOver);
           }
         
     }

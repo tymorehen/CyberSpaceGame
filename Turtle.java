@@ -195,7 +195,7 @@ public class Turtle extends Actor
         // left movement
 
 
-        if (Greenfoot.isKeyDown("A"))
+        if (Greenfoot.isKeyDown("Left"))
 
         {
             deltaX = deltaX - SPEED_X;
@@ -203,19 +203,19 @@ public class Turtle extends Actor
         }  
         // right movement
 
-        if (Greenfoot.isKeyDown("D"))
+        if (Greenfoot.isKeyDown("Right"))
         {
             deltaX = deltaX + SPEED_X;
             animateRight();
         }
         // down movement
-        if (Greenfoot.isKeyDown("S"))
+        if (Greenfoot.isKeyDown("Down"))
         {
             deltaY = deltaY + SPEED_X;
             animateDown();
         }
         // up movement
-        if (Greenfoot.isKeyDown("W"))
+        if (Greenfoot.isKeyDown("Up"))
         {
             deltaY = deltaY - SPEED_X;
             animateUp();
