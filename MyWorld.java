@@ -20,6 +20,11 @@ public class MyWorld extends World
     Boss1 boss1;
     Boss2 boss2;
     FinalBoss finalBoss;
+    Enemy enemy;
+    Enemy enemy1;
+    Enemy enemy2;
+    Enemy enemy3;
+    Enemy enemy4;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -85,6 +90,21 @@ public class MyWorld extends World
         
         finalBoss = new FinalBoss();
         addObject(finalBoss, 1025,-800);
+        
+        enemy = new Enemy();
+        addObject(enemy, 1500,-200);
+        enemy1 = new Enemy();
+        addObject(enemy1, 1200,-200);
+        
+        enemy2 = new Enemy();
+        addObject(enemy2, 500,-600);
+        
+        enemy3 = new Enemy();
+        addObject(enemy3, 1200,-700);
+        
+        enemy4 = new Enemy();
+        addObject(enemy4, 1400,-700);
+        
         
         player = new Turtle();
         addObject(player,300, 200);

@@ -54,13 +54,17 @@ public class Enemy extends Actor
         collisionDetection();
         // cycle through animation images
         animate();
+        if (isTouching(Bullet.class))
+        {
+            getWorld().removeObject(this);
+        }
     }
     
     public void follow()
     {
         Actor turtle = (Actor)getWorld().getObjects(Turtle.class).get(0);
         turnTowards(turtle.getX(), turtle.getY());
-        move(2);
+        move(1);
         setRotation(0);
         if (getWorld().getObjects(Turtle.class).isEmpty()) return;
         
@@ -108,11 +112,7 @@ public class Enemy extends Actor
     public Enemy()
     {
 
-        Actor turtle = (Actor)getWorld().getObjects(Turtle.class).get(0);
-        turnTowards(turtle.getX(), turtle.getY());
-        move(2);
-        if (getWorld().getObjects(Turtle.class).isEmpty()) return;
-
+       
         // load animation images
         
         // load left animation images

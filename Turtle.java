@@ -181,7 +181,8 @@ public class Turtle extends Actor
         // stop game if touching enemy
         if (isTouching(Enemy.class))
         {
-            Greenfoot.stop();
+             ZGameOver_enemy gameOver = new ZGameOver_enemy();
+             Greenfoot.setWorld(gameOver);
         }
 
         movementControls();
